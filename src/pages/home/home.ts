@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, IonicPage, MenuController } from 'ionic-angular';
-import { credenciaisDTO } from '../../models/credenciais.dto';
+import { CredenciaisDTO } from '../../models/credenciais.dto';
 import { AuthService } from '../../services/auth.service';
 
 @IonicPage()
@@ -10,7 +10,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class HomePage {
 
-  creds: credenciaisDTO = {
+  creds: CredenciaisDTO = {
     email: "",
     senha: ""
   };
