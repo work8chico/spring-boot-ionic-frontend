@@ -30,7 +30,6 @@ export class HomePage {
   this.menu.swipeEnable(true);
   }
 
-
   ionViewDidEnter(){
 
     this.auth.refreshToken()
@@ -41,7 +40,6 @@ export class HomePage {
     error => {});
   }
 
-  
   login(){
 
     this.auth.authenticate(this.creds)
@@ -51,5 +49,11 @@ export class HomePage {
     },
     error => {});
   }
+
+  signup(){
+    console.log("passou");
+    this.navCtrl.push('SignupPage');
+  }
+
 
 }
