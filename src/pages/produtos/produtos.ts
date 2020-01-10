@@ -40,4 +40,8 @@ items : ProdutoDTO[];
     }
 
   }
+
+  showDetail(){
+    this.navCtrl.push('ProdutoDetailPage');
+  }
 }
