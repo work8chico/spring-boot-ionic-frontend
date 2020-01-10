@@ -41,7 +41,7 @@ items : ProdutoDTO[];
 
   }
 
-  showDetail(){
-    this.navCtrl.push('ProdutoDetailPage');
+  showDetail(produto_id: string){
+    this.navCtrl.push('ProdutoDetailPage',{produto_id: produto_id});
   }
 }
