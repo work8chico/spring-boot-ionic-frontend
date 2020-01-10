@@ -70,7 +70,6 @@ export class SignupPage {
    this.clienteService.insert(this.formGroup.value)
    .subscribe(response => {
      this.showInsertOk();
-
    },
    error =>{});
  }
