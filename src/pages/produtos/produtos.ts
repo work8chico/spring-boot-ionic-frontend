@@ -21,6 +21,11 @@ items : ProdutoDTO[];
   }
 
   ionViewDidLoad() {
+    this.loadData();
+      
+  };
+
+  loadData(){
     let categoria_id = this.navParams.get('categoria_id');
     let loader = this.presentLoading();
     this.produtoSerice.findByCategoria(categoria_id)
@@ -31,8 +36,8 @@ items : ProdutoDTO[];
       },
       error => {
         loader.dismiss();
-      });  
-  };
+      });
+  }
 
   loadImageUrls(){
     for(var i=0; i<this.items.length; i++){
@@ -56,5 +61,12 @@ items : ProdutoDTO[];
     });
     loader.present();
     return loader;
+  }
+
+  doRefresh(event) {
+    this.loadData();
+    setTimeout(() => {      
+      event.complete();
+    }, 1200);
   }
 }
