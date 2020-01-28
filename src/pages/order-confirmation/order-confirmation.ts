@@ -63,7 +63,7 @@ export class OrderConfirmationPage {
   checkout(){
     this.pedidoService.insert(this.pedido)
       .subscribe(response => {
-      //this.cartService.createOrClearCart();
+      this.cartService.createOrClearCart();
       console.log(response.headers.get('location'));
     },
     error =>{
